@@ -1,0 +1,131 @@
+@import "vars.css";
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.7;
+    perspective-origin: 0% 50%;
+    perspective: 800px;
+    background-color: rgb(228, 199, 138) !important;
+}
+
+main {
+    transition: transform 150ms ease-out;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transform-origin: 0% 50%;
+    background-size: cover;
+    height: max-content;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 800%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 90;
+}
+.overlay-display{
+    display: block;
+}
+
+main section {
+    margin: auto;
+    margin-top: 60px;
+    padding: 15px 20px;
+    width: 90%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    display: none;
+}
+
+section h1 {
+    font-weight: 800;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-left: 10px;
+    font-size: 2em;
+}
+
+section p {
+    display: inline-block;
+    margin: 16px 0;
+}
+
+.button-block {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    width: 70px;
+    border: none;
+    color: var(--white-text);
+    font-size: 14px !important;
+    height: 25px;
+}
+
+#log-in {
+    background-color: var(--feature-color);
+}
+
+#log-in:hover {
+    opacity: .7;
+}
+
+#register {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+#register:hover {
+    background-color: var(--feature-color);
+    color: var(--white-text);
+    border: none;
+    transition: ease .3s;
+}
+
+#shopping-cart {
+    background-color: transparent;
+}
+
+#shopping-cart>i:hover {
+    font-size: 15px;
+    color: var(--feature-color);
+}
+
+@media (max-width: 723px) {
+    .button-block>button {
+        width: 45px;
+        font-size: 10px !important;
+    }
+    #shopping-cart>i {
+        font-size: 14px !important;
+    }
+    #shopping-cart>i:hover {
+        color: initial;
+    }
+    button {
+        width: 80px;
+    }
+    #register:hover {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--text-color);
+    }
+    #log-in:hover {
+        opacity: 1;
+    }
+}

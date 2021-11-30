@@ -1,0 +1,19 @@
+-Format the project source          V
+-Build All Product Page             V
+-Build Macbook Page                 V
+-Build Surface Page                 V
+-Build Lenovo Page                  V
+-Build Asus Page                    V
+-Build Acer Page                    V
+-Build Dell Page                    V
+-Build HP Page                      V
+-Build MSI Page                     V
+-Build the Page changing System     V
+<<<<<<< HEAD
+=======
+-Build Shopping Cart
+>>>>>>> b69374bddccbe542fe3534ece6e3e6fbdcb6ca49
+-Build About us Part
+-Build Footer
+
+

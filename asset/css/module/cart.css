@@ -1,0 +1,33 @@
+@import url("./vars.css");
+
+.cart{
+    position: fixed;
+    top: 40px;
+    background-color: #fff;
+    right: 40px;
+    box-shadow: 1px 1px 1px grey;
+    z-index: 91;
+    border: 1px solid var(--feature-color) ;
+    padding: 10px 15px;
+    display: none;
+
+}
+.notification{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 42%;
+    width: fit-content;
+    display: none;
+}
+.cart-display{
+    display: flex;
+}
+.notification>button{
+    background-color: var(--feature-color);
+    color: var(--white-text);
+}
+.notification>button:hover{
+    opacity: .8;
+}
