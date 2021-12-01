@@ -3,19 +3,27 @@ footer {
     background-color: var(--feature-color);
     color: var(--white-text);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 15px 30px;
 }
-
+footer>p{
+    align-self: center;
+    justify-self: flex-end;
+    color: rgba(128, 128, 128, 0.692);
+}
 #scroll-to-top {
+    position: sticky;
+    left: 100%;
+    bottom: 0;
     width: 30px;
     height: 30px;
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
+    display: none;
+}       
 #scroll-to-top>i {
     color: var(--text-color);
     font-weight: 900;
@@ -23,4 +31,29 @@ footer {
 
 #scroll-to-top:hover {
     opacity: .8;
+}
+.address{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.address>div>p{
+    color: var(--white-text);
+}
+
+.address>div>h5{
+    color: var(--white-text);
+}
+
+@media (min-width: 723px) and (max-width: 1024px){
+    .address{
+        width: 50%;
+    }
+}
+@media  (max-width: 723px) {
+    .address{
+        width: 50%;
+        flex-direction: column;
+    }
 }

@@ -7,18 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="./asset/css/registerAndLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
 </head>
 
 <body>
     <div class="main">
         <form action="./index.html">
+            <h1>LOGO</h1>
             <h1>Register here</h1>
-            <label for="#register__user-name">User name:</label>
-            <input class="form__user-name" id="register__user-name" type="text">
-            <label for="#register__user-pass">Password:</label>
-            <input class="form__pass" id="register__user-pass" minlength="8" type="text">
-            <label for="#register__user-confirm"> Confirm Password:</label>
-            <input class="form__pass-confirm" id="register__user-confirm" minlength="8" type="text">
+            <div>
+                <input placeholder="Enter Username" class="form__user-name" id="register__user-name" type="text"  required autofocus>
+                <input type="password" placeholder="Enter Password" class="form__pass" id="register__user-pass" minlength="8" type="text" required><i class="fas fa-eye"></i>
+                <input type="password" placeholder="Confirm Your Password" class="form__pass-confirm" id="register__user-confirm" minlength="8" type="text" required>
+            </div>
             <button type="submit">Register</button>
         </form>
         <div class="register__other-way">

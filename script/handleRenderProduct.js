@@ -35,3 +35,20 @@ renderProducts(msi, msiPageBlock);
 renderProducts(dell, dellPageBlock);
 renderProducts(lenovo, lenovoPageBlock);
 renderProducts(PRODUCT, allProductsPageBlock);
+
+
+
+//BONUS SCROLL TO TOP
+
+let scrollToTop = document.getElementById("scroll-to-top");
+
+scrollToTop.addEventListener("click", function(){
+    window.scrollTo(0,0);
+})
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTop.style.display = "flex";
+  } else {
+    scrollToTop.style.display = "none";
+  }};
