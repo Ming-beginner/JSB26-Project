@@ -1,7 +1,7 @@
 export default function renderProducts(productList, placeToRender) {
     let htmls = productList.map(function(item) {
         return `
-                <div class="product__item">
+                <div class="product__item laptop-${String(item.id)}">
                     <img class="product__item--img" src="${item.imageLink}" alt="">
                     <div class="product__item--content">
                         <h3>${item.name}</h3>

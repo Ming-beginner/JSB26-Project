@@ -26,6 +26,7 @@ let list = [];
 const PRODUCT = list.concat(mac, surface, acer, lenovo, asus, dell, hp, msi);
 
 
+
 renderProducts(acer, acerPageBlock);
 renderProducts(mac, macbookPageBlock);
 renderProducts(surface, surfacePageBlock);
