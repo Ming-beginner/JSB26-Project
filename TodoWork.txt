@@ -9,12 +9,13 @@
 -Build HP Page                      V
 -Build MSI Page                     V
 -Build the Page changing System     V
--Build the ScrollToTop              
-<<<<<<< HEAD
-=======
+-Build the ScrollToTop              V
+-Build Log In page                  V
+-Build Register page                V
+-Handle data between pages   
 -Build Shopping Cart
->>>>>>> b69374bddccbe542fe3534ece6e3e6fbdcb6ca49
 -Build About us Part
+-Build Preview Products
 -Build Footer
 
 
