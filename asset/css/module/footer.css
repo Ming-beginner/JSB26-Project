@@ -1,1 +1,26 @@
 @import "vars.css";
+footer {
+    background-color: var(--feature-color);
+    color: var(--white-text);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+#scroll-to-top {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-to-top>i {
+    color: var(--text-color);
+    font-weight: 900;
+}
+
+#scroll-to-top:hover {
+    opacity: .8;
+}

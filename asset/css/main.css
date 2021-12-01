@@ -2,11 +2,10 @@
 @import url("./module/navbar.css");
 @import url("./module/vars.css");
 @import url("./module/footer.css");
-@import url("./module/carouselAndProductPortfolio.css");
+@import url("./module/carouselAndProducts.css");
 @import url("./module/body.css");
 @import url("./module/cart.css");
-
-.causion{
+.causion {
     width: fit-content;
     height: fit-content;
     position: fixed;
@@ -14,8 +13,8 @@
     top: 10px;
 }
 
-@media (max-width: 723px){
-    .causion{
+@media (max-width: 723px) {
+    .causion {
         font-size: 11px;
         width: 80px;
     }

@@ -9,6 +9,7 @@
 -Build HP Page                      V
 -Build MSI Page                     V
 -Build the Page changing System     V
+-Build the ScrollToTop              
 <<<<<<< HEAD
 =======
 -Build Shopping Cart

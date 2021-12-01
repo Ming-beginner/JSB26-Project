@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="./asset/css/registerAndLogin.css">
 </head>
+
 <body>
-    
+    <div class="main">
+        <form action="./index.html">
+            <h1>Register here</h1>
+            <label for="#register__user-name">User name:</label>
+            <input class="form__user-name" id="register__user-name" type="text">
+            <label for="#register__user-pass">Password:</label>
+            <input class="form__pass" id="register__user-pass" minlength="8" type="text">
+            <label for="#register__user-confirm"> Confirm Password:</label>
+            <input class="form__pass-confirm" id="register__user-confirm" minlength="8" type="text">
+            <button type="submit">Register</button>
+        </form>
+        <div class="register__other-way">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="./script/registerAndLogin/register.js"></script>
 </body>
+
 </html>

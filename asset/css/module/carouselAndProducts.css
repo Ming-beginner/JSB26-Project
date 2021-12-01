@@ -15,9 +15,8 @@
     display: flex;
     justify-content: center;
     background-color: var(--feature-color);
-    padding: 10px 0;
+    padding: 5px 0;
     color: var(--white-text);
-    border-radius: 50px;
     cursor: pointer;
 }
 
@@ -74,11 +73,9 @@
     flex-grow: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.buy-block__buy>button{
-    background-color: transparent;
-    text-decoration: none;
-}
+
 .buy-block__buy:hover {
     opacity: 0.8;
 }

@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
+    <link rel="stylesheet" href="./asset/css/registerAndLogin.css">
 </head>
+
 <body>
-    
+    <div class="main">
+        <form action="./index.html">
+            <h1>Login here</h1>
+            <label for="#log-in__user-name">User name:</label>
+            <input class="form__user-name" id="log-in__user-name" type="text">
+            <label for="#log-in__user-pass">Password:</label>
+            <input class="form__pass" id="log-in__user-pass" minlength="8" type="text">
+            <button type="submit">Register</button>
+        </form>
+        <div class="log-in__other-way">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="./script/registerAndLogin/logIn.js"></script>
 </body>
+
 </html>
