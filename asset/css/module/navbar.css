@@ -69,6 +69,15 @@ nav.menu-hover {
     color: var(--primary-color);
     background-color: #fff;
 }
+.nav-header>img {
+    width: 100%;
+    height: auto;
+}
+
+
+.nav-header>img:hover {
+    opacity: .8;
+}
 
 nav ul {
     margin: 0;

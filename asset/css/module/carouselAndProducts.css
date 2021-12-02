@@ -114,7 +114,7 @@
     height: fit-content;
     width: max-content;
     cursor: pointer;
-    align-self: center;
+    align-self: center !important;
 }
 
 .product__see-more:hover {

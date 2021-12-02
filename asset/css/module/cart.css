@@ -1,33 +1,116 @@
 @import url("./vars.css");
-
-.cart{
+.cart {
     position: fixed;
     top: 40px;
     background-color: #fff;
     right: 40px;
     box-shadow: 1px 1px 1px grey;
     z-index: 91;
-    border: 1px solid var(--feature-color) ;
+    border: 1px solid var(--feature-color);
     padding: 10px 15px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
     display: none;
-
 }
-.notification{
+
+.notification {
+    position: sticky;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     top: 50%;
     left: 42%;
-    width: fit-content;
+    width: max-content;
     display: none;
 }
-.cart-display{
+
+.cart-display {
     display: flex;
 }
-.notification>button{
+
+.notification>button {
     background-color: var(--feature-color);
     color: var(--white-text);
 }
-.notification>button:hover{
+
+.notification>button:hover {
     opacity: .8;
+}
+
+.cart__product {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.cart__product>img {
+    width: 70px;
+    height: auto;
+}
+
+.cart__product--content {
+    width: 70%;
+}
+
+.cart__product--content>h6 {
+    font-size: 17px;
+}
+
+.cart__product--content>p {
+    color: red;
+}
+
+.cart__buy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart__buy>button {
+    background-color: var(--feature-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px !important;
+    width: max-content;
+    height: max-content;
+}
+
+.cart__buy>button:hover {
+    opacity: .8;
+}
+
+.cart__check-block {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    flex-direction: column;
+}
+
+.cart__check-block>button {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+}
+
+.cart__clear {
+    background-color: transparent !important;
+    border: 1px solid black !important;
+    color: var(--text-color);
+}
+
+.cart__clear:hover {
+    background-color: var(--feature-color) !important;
+    color: white !important;
+    border: none !important;
+    transition: ease .3s;
+}
+
+@media (max-width: 723px) {
+    .cart {
+        right: 0;
+        top: 70px;
+        width: 100%;
+    }
 }

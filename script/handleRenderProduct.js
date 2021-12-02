@@ -18,12 +18,48 @@ let hpPageBlock = document.querySelector(".hp-page>.page-product-block");
 let lenovoPageBlock = document.querySelector(".lenovo-page>.page-product-block");
 let allProductsPageBlock = document.querySelector(".all-products-page>.page-product-block");
 
+let macbookGallery = document.querySelector(".macbook-block");
+let surfaceGallery = document.querySelector(".surface-block");
+let acerGallery = document.querySelector(".acer-block");
+let asusGallery = document.querySelector(".asus-block");
+let lenovoGallery = document.querySelector(".lenovo-block");
+let msiGallery = document.querySelector(".msi-block");
+let hpGallery = document.querySelector(".hp-block");
+let dellGallery = document.querySelector(".dell-block");
+
+let macbookGalleryProducts = [];
+let surfaceGalleryProducts = [];
+let acerGalleryProducts = [];
+let asusGalleryProducts = [];
+let lenovoGalleryProducts = [];
+let msiGalleryProducts = [];
+let hpGalleryProducts = [];
+let dellGalleryProducts = [];
 
 
+for (let i = 0; i < 3; i++) {
+    macbookGalleryProducts.push(mac[i]);
+    surfaceGalleryProducts.push(surface[i]);
+    acerGalleryProducts.push(acer[i]);
+    asusGalleryProducts.push(asus[i]);
+    lenovoGalleryProducts.push(lenovo[i]);
+    msiGalleryProducts.push(msi[i]);
+    hpGalleryProducts.push(hp[i]);
+    dellGalleryProducts.push(dell[i]);
+
+}
+renderProducts(macbookGalleryProducts, macbookGallery);
+renderProducts(surfaceGalleryProducts, surfaceGallery);
+renderProducts(asusGalleryProducts, asusGallery);
+renderProducts(lenovoGalleryProducts, lenovoGallery);
+renderProducts(acerGalleryProducts, acerGallery);
+renderProducts(msiGalleryProducts, msiGallery);
+renderProducts(hpGalleryProducts, hpGallery);
+renderProducts(dellGalleryProducts, dellGallery);
 
 
 let list = [];
-const PRODUCT = list.concat(mac, surface, acer, lenovo, asus, dell, hp, msi);
+export const PRODUCT = list.concat(mac, surface, acer, lenovo, asus, dell, hp, msi);
 
 
 
@@ -43,13 +79,14 @@ renderProducts(PRODUCT, allProductsPageBlock);
 
 let scrollToTop = document.getElementById("scroll-to-top");
 
-scrollToTop.addEventListener("click", function(){
-    window.scrollTo(0,0);
+scrollToTop.addEventListener("click", function() {
+    window.scrollTo(0, 0);
 })
 
 window.onscroll = function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTop.style.display = "flex";
-  } else {
-    scrollToTop.style.display = "none";
-  }};
+        scrollToTop.style.display = "flex";
+    } else {
+        scrollToTop.style.display = "none";
+    }
+};
