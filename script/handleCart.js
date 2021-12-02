@@ -25,6 +25,7 @@ let cartProductList = product.forEach(function(item) {
                 <input class="cart__checkbox laptop-${item.id}-checkbox" type="checkbox" name="" id="">
             </div>
         </div>`
+        cartBlock.innerHTML = "";
         cartBlock.innerHTML += htmls;
     })
 })
@@ -39,6 +40,9 @@ function deleteProductInCart() {
                 allPriceBlock.innerHTML = allPrice;
             }
             e.target.parentElement.parentElement.parentElement.remove();
+            if (cartBlock.innerHTML == 0) {
+                cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>"
+            }
         })
     }
 }
@@ -67,7 +71,7 @@ function appendNotification() {
 
 
 clearAllInCartBtn.addEventListener("click", function() {
-    cartBlock.innerHTML = "";
+    cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>";
     allPrice = 0;
     allPriceBlock.innerHTML = allPrice;
 })
@@ -78,7 +82,7 @@ notificationClose.addEventListener("click", function() {
 });
 
 shoppingCart.addEventListener("click", function() {
-    if (cartBlock.innerHTML == "") {
+    if (cartBlock.innerHTML == 0) {
         cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>"
     }
     deleteProductInCart();
