@@ -34,7 +34,7 @@ export const HP = [{
         name: "HP 15s",
         imageLink: "./asset/img/hp/laptop-hp-15s-fq2558tu.jpg",
         feature: "15.6 inches/8GB/512GB/Intel Core i5",
-        price: "1699000đ",
+        price: "1699000",
         oldPrice: "14490000",
         id: 51
     },

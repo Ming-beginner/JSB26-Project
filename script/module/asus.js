@@ -10,7 +10,7 @@ export const ASUS = [{
         name: "Asus Expertbook",
         imageLink: "./asset/img/asus/asus_expertbook.jpg",
         feature: "14 inches/8GB/512GB/Intel Core i5",
-        price: "28.900.900",
+        price: "28900900",
         oldPrice: "28990000",
         id: 19
     },

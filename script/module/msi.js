@@ -10,7 +10,7 @@ export const MSI = [{
         name: "MSI Bravo 15",
         imageLink: "./asset/img/msi/laptop-msi-bravo-15.jpg",
         feature: "15.6 inches/8GB/512GB/AMD R5",
-        price: "2119.000",
+        price: "2119000",
         oldPrice: "21990000",
         id: 37
     },

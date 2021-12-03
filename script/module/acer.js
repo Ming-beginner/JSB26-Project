@@ -10,7 +10,7 @@ export const ACER = [{
         name: "Acer Predator Triton 500 SE",
         imageLink: "./asset/img/acer/acer-predator-triton-500.jpg",
         feature: "16 inches/16GB/1TB/Intel Core i7",
-        price: "No Stock Yet",
+        price: "35000000",
         oldPrice: "36000000",
         id: 11
     },

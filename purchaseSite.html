@@ -20,7 +20,7 @@
             <input class="name-input" placeholder="Enter your name" type="text" name="" id="" required autofocus>
             <input class="address-input" placeholder="Enter your address" type="text" name="" id="" required>
         </div>
-        <button class="purchase-btn">Purchase</button>
+        <button type="button" class="purchase-btn">Purchase</button>
         <p>© 2017-2018</p>
     </form>
 
@@ -29,31 +29,7 @@
         <h2>Failed to Purchase</h2>
         <button onclick="window.location.href='./index.html'">Ok, go back to homepage</button>
     </div>
-    <script>
-        let nameInput = document.querySelector(".name-input");
-        let addressInput = document.querySelector(".address-input");
-        let purchaseBtn = document.querySelector(".purchase-btn");
-        let overlay = document.querySelector(".overlay");
-        let notification = document.querySelector(".purchase-notification");
-        nameInput.addEventListener("focusout", function() {
-            if (nameInput.value == 0) {
-                nameInput.classList.add("input-error");
-            } else {
-                nameInput.classList.remove("input-error");
-            }
-        })
-        addressInput.addEventListener("focusout", function() {
-            if (addressInput.value == 0) {
-                addressInput.classList.add("input-error");
-            } else {
-                addressInput.classList.remove("input-error");
-            }
-        })
-        purchaseBtn.addEventListener("click", function() {
-            overlay.classList.add("overlay-display");
-            notification.classList.add("purchase-notification-display");
-        })
-    </script>
+    <script src="./script/registerAndLogin+Purchase/purchase.js"></script>
 </body>
 
 </html>

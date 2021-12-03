@@ -1,20 +1,20 @@
 @import url("./module/vars.css");
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(201, 200, 200);
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,14 +25,19 @@ form{
     padding: 50px 30px;
     border-radius: 10px;
 }
-form>div{
+
+form>img {
+    width: 70px;
+}
+
+form>div {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 }
 
-form>div>input{
+form>div>input {
     height: 40px;
     width: 300px;
     padding: 10px;
@@ -40,22 +45,26 @@ form>div>input{
     border: 1px solid #ced4da;
 }
 
-.input-error{
+.input-error {
     border: 3px solid red;
 }
-form>div>i{
+
+form>div>i {
     position: absolute;
     top: 45%;
     right: 3px;
     cursor: pointer;
 }
-.login>i{
+
+.login>i {
     top: 65% !important;
 }
-form>div>i:hover{
+
+form>div>i:hover {
     opacity: .8;
 }
-form>button{
+
+form>button {
     background-color: var(--feature-color);
     border: none;
     color: var(--white-text);
@@ -64,10 +73,10 @@ form>button{
     cursor: pointer;
 }
 
-form>button:hover{
+form>button:hover {
     opacity: .8;
 }
 
-form>p{
+form>p {
     color: rgba(128, 128, 128, 0.795);
 }

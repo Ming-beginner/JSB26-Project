@@ -8,7 +8,9 @@ let shoppingCart = document.getElementById("shopping-cart");
 let notification = document.querySelector(".notification");
 let notificationClose = document.querySelector(".notification>button");
 let clearAllInCartBtn = document.querySelector(".cart__clear");
+let cartBuyBtn = document.querySelector(".cart__buy-btn");
 
+cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>";
 
 let cartProductList = product.forEach(function(item) {
     document.querySelector(`.laptop-${item.id}>.product__item--buy-block>.buy-block__add`).addEventListener("click", function() {
@@ -25,7 +27,7 @@ let cartProductList = product.forEach(function(item) {
                 <input class="cart__checkbox laptop-${item.id}-checkbox" type="checkbox" name="" id="">
             </div>
         </div>`
-        cartBlock.innerHTML = "";
+        cartBlock.removeChild(document.querySelector('.cart__products>p'));
         cartBlock.innerHTML += htmls;
     })
 })
@@ -58,7 +60,8 @@ function updateAllPrice() {
                     allPrice -= Number(e.target.parentElement.parentElement.querySelector(".cart__product--content>p").textContent)
                 }
             }
-            allPriceBlock.innerHTML = allPrice
+
+            allPriceBlock.innerHTML = allPrice;
         })
     }
 }
@@ -74,6 +77,8 @@ clearAllInCartBtn.addEventListener("click", function() {
     cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>";
     allPrice = 0;
     allPriceBlock.innerHTML = allPrice;
+    cartBuyBtn.disabled = true;
+    cartBuyBtn.style.cursor = "not-allowed";
 })
 
 notificationClose.addEventListener("click", function() {
@@ -83,10 +88,40 @@ notificationClose.addEventListener("click", function() {
 
 shoppingCart.addEventListener("click", function() {
     if (cartBlock.innerHTML == 0) {
-        cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>"
+        cartBlock.innerHTML = "<p>There aren't any products in your cart!!</p>";
+        if (cartBlock.innerHTML == "<p>There aren't any products in your cart!!</p>") {
+            cartBuyBtn.onclick = "";
+            cartBuyBtn.style.cursor = "not-allowed";
+        }
+    } else {
+        if (allPrice === 0) {
+            cartBuyBtn.onclick = "";
+            cartBuyBtn.style.cursor = "not-allowed";
+        } else {
+            cartBuyBtn.onclick = function() {
+                window.location.href = "./purchaseSite.html";
+            };
+            cartBuyBtn.style.cursor = "pointer";
+        }
+
     }
     deleteProductInCart();
     updateAllPrice();
+    let buyCheckbox = document.querySelectorAll(".cart__checkbox");
+    for (i of buyCheckbox) {
+        i.addEventListener("click", function() {
+            console.log(allPrice);
+            if (allPrice === 0) {
+                cartBuyBtn.onclick = "";
+                cartBuyBtn.style.cursor = "not-allowed";
+            } else {
+                cartBuyBtn.onclick = function() {
+                    window.location.href = "./purchaseSite.html";
+                };
+                cartBuyBtn.style.cursor = "pointer";
+            }
+        })
+    }
     shoppingCartBlock.classList.add("cart-display");
     shoppingCartBlock.addEventListener("mouseover", function() {
         shoppingCartBlock.classList.add("cart-display");
@@ -95,4 +130,4 @@ shoppingCart.addEventListener("click", function() {
         });
     });
 });
-allPriceBlock.innerHTML = allPrice + "đ";
+allPriceBlock.innerHTML = allPrice;
