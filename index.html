@@ -51,8 +51,8 @@
         <ul>
             <a onclick="changingTabs(mainPage); closeNavByClickMain()" href="#">HOME</a>
             <a onclick="changingTabs(allLaptopPage)" id="nav-product" class="goto-all-product-page" href="#">LAPTOP</a>
-            <a id="nav-about" href="#">CONTACT US</a>
-            <a onclick="closeNavByClickMain()" href="#">ABOUT</a>
+            <a id="nav-about" href="#">FOLLOW US</a>
+            <a onclick="closeNavByClickMain()" href="#footer">ABOUT</a>
         </ul>
         <div class="menu-product menu-content">
             <li onclick="changingTabs(macbookPage)" class="products goto-macbook-page">
@@ -85,16 +85,13 @@
                 <a target="_blank" href="https://www.youtube.com"><i style="color: red;" class="fab fa-youtube"></i></a>
             </li>
             <li>
-                <a target="_blank" href="https://www.facebook.com"><i style="color: blue;"
-                        class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://www.facebook.com"><i style="color: blue;" class="fab fa-facebook"></i></a>
             </li>
             <li>
-                <a target="_blank" href="https://www.instagram.com"><i style="color: orange;"
-                        class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://www.instagram.com"><i style="color: orange;" class="fab fa-instagram"></i></a>
             </li>
             <li>
-                <a target="_blank" href="https://www.twitter.com"><i style="color: lightblue;"
-                        class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.twitter.com"><i style="color: lightblue;" class="fab fa-twitter"></i></a>
             </li>
         </div>
     </nav>
@@ -380,24 +377,94 @@
         </div>
     </main>
     <button id="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
-    <footer>
-        <div>
-            <div class="address">
-                <div>
-                    <h5>Address:</h5>
-                    <p><span><i class="fas fa-map-marker-alt"></i></span> Ha Noi, Viet Nam</p>
-                    <p><span><i class="fas fa-map-marker-alt"></i></span> Ho Chi Minh, Viet Nam</p>
-                </div>
-                <div>
-                    <h5>Hotline:</h5>
-                    <p><span><i class="fas fa-phone"></i></span>XXXX XXXX</p>
-                    <p><span><i class="fas fa-phone"></i></span>#### ####</p>
-                </div>
-            </div>
-        </div>
+    <!-- Footer -->
+    <footer id="footer" class="page-footer font-small unique-color-dark">
+        <img width="70px" src="./asset/img/logo.png" alt="">
 
-        <p>© 2017-2018</p>
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Lap-Ore Inc</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, libero repellat. At inventore nisi ipsum voluptas, recusandae dolores iste sunt, quo sequi pariatur doloremque. Beatae itaque dolores eveniet veniam. Lorem, ipsum dolor
+                        sit amet consectetur adipisicing elit. Maxime neque delectus repudiandae esse est nisi ullam quisquam, soluta consequuntur nihil quia, totam sed aliquam. Quod impedit itaque esse reiciendis necessitatibus.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Follow Us</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a target="_blank" href="https://www.youtube.com"><i style="color: red;" class="fab fa-youtube"></i></a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://www.facebook.com"><i style="color: blue;" class="fab fa-facebook"></i></a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://www.instagram.com"><i style="color: orange;" class="fab fa-instagram"></i></a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://www.twitter.com"><i style="color: lightblue;" class="fab fa-twitter"></i></a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Other great shops</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="https://cellphones.com.vn/">cellphoneS</a>
+                    </p>
+                    <p>
+                        <a href="https://fptshop.com.vn/">FPT shop</a>
+                    </p>
+                    <p>
+                        <a href="https://thinkpro.vn/">ThinkPro</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Ha Noi, Viet Nam</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> 0## #### ###</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> 0XX XXX XXX</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+        <p class="copy-right">© 2017-2018</p>
     </footer>
+    <!-- Footer -->
     <!--Javascript-->
     <script src="./script/handleNavbar.js"></script>
     <script type="module" src="./script/handleRenderProduct.js"></script>

@@ -4,11 +4,7 @@ body {
     line-height: 1.7;
     perspective-origin: 0% 50%;
     perspective: 800px;
-    background-color: rgb(228, 199, 138) !important;
-}
-
-main {
-    transition: transform 150ms ease-out;
+    background-color: var(--primary-color) !important;
 }
 
 main {
@@ -19,6 +15,7 @@ main {
     transform-origin: 0% 50%;
     background-size: cover;
     height: max-content;
+    transition: transform 150ms ease-out;
 }
 
 .overlay {
@@ -86,8 +83,8 @@ button {
 
 #register {
     background-color: transparent;
-    border: 1px solid var(--primary-color);
-    color: var(--text-color);
+    border: 1px solid var(--white-text);
+    color: var(--white-text);
 }
 
 #register:hover {
@@ -99,6 +96,10 @@ button {
 
 #shopping-cart {
     background-color: transparent;
+}
+
+#shopping-cart>i {
+    color: var(--white-text);
 }
 
 #shopping-cart>i:hover {

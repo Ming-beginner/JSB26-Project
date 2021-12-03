@@ -28,11 +28,10 @@ for (i of products) {
 function menuClick() {
     overlay.classList.toggle("overlay-display");
     nav.classList.toggle("menu-active");
-    console.log(menu.innerHTML)
     if (menu.innerHTML == '<img src="./asset/img/logo.png" alt="">') {
         menu.innerHTML = '<i class="fas fa-times"></i>';
     } else {
-        menu.innerHTML = `<img width="100%" src="./asset/img/logo.png" alt="">`;
+        menu.innerHTML = `<img src="./asset/img/logo.png" alt="">`;
     }
 }
 
