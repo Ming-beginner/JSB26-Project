@@ -11,7 +11,7 @@ export default function renderProducts(productList, placeToRender) {
                         </div>
                     </div>
                     <div class="product__item--buy-block">
-                        <button onclick="window.open('./errorSite.html')" class="buy-block__buy">Buy Now</button>
+                        <button onclick="window.open('./purchaseSite.html')" class="buy-block__buy">Buy Now</button>
                         <button class="buy-block__add">Add To Cart</button>
                     </div>
                 </div>`
