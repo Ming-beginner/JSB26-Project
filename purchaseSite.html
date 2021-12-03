@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/img/logo.png" type="image/x-icon">
+    <title>Purchase Site</title>
+    <link rel="stylesheet" href="./asset/css/registerAndLogin.css">
+    <link rel="stylesheet" href="./asset/css/purchase.css">
+</head>
+
+
+<body>
+    <form action="">
+        <img src="./asset/img/logo.png" alt="">
+        <h1>Purchase here</h1>
+        <div>
+            <input class="name-input" placeholder="Enter your name" type="text" name="" id="" required autofocus>
+            <input class="address-input" placeholder="Enter your address" type="text" name="" id="" required>
+        </div>
+        <button class="purchase-btn">Purchase</button>
+        <p>© 2017-2018</p>
+    </form>
+
+    <div class="overlay"></div>
+    <div class="purchase-notification">
+        <h2>Failed to Purchase</h2>
+        <button onclick="window.location.href='./index.html'">Ok, go back to homepage</button>
+    </div>
+    <script>
+        let nameInput = document.querySelector(".name-input");
+        let addressInput = document.querySelector(".address-input");
+        let purchaseBtn = document.querySelector(".purchase-btn");
+        let overlay = document.querySelector(".overlay");
+        let notification = document.querySelector(".purchase-notification");
+        nameInput.addEventListener("focusout", function() {
+            if (nameInput.value == 0) {
+                nameInput.classList.add("input-error");
+            } else {
+                nameInput.classList.remove("input-error");
+            }
+        })
+        addressInput.addEventListener("focusout", function() {
+            if (addressInput.value == 0) {
+                addressInput.classList.add("input-error");
+            } else {
+                addressInput.classList.remove("input-error");
+            }
+        })
+        purchaseBtn.addEventListener("click", function() {
+            overlay.classList.add("overlay-display");
+            notification.classList.add("purchase-notification-display");
+        })
+    </script>
+</body>
+
+</html>
