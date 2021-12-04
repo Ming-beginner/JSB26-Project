@@ -22,7 +22,7 @@
             <h1>Register here</h1>
             <div>
                 <input placeholder="Enter Username" class="form__user-name" id="register__user-name" type="text" required autofocus>
-                <input type="password" placeholder="Enter Password" class="form__pass" id="register__user-pass" minlength="8" type="text" required><i class="fas fa-eye"></i>
+                <input type="password" placeholder="Enter Password(at least 8 characters)" class="form__pass" id="register__user-pass" minlength="8" type="text" required><i class="fas fa-eye"></i>
                 <input type="password" placeholder="Confirm Your Password" class="form__pass-confirm" id="register__user-confirm" minlength="8" type="text" required>
             </div>
             <button type="button">Register</button>
@@ -30,8 +30,9 @@
         </form>
     </div>
     <div class="overlay"></div>
-    <div class="purchase-notification">
+    <div class="notification">
         <h2>Failed to Register</h2>
+        <p>Some error occurred while registering</p>
         <button onclick="window.location.href='./index.html'">Ok, go back to homepage</button>
     </div>
     <script src="./script/registerAndLogin+Purchase/register.js"></script>

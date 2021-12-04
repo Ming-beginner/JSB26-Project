@@ -9,6 +9,7 @@ let notification = document.querySelector(".notification");
 let notificationClose = document.querySelector(".notification>button");
 let clearAllInCartBtn = document.querySelector(".cart__clear");
 let cartBuyBtn = document.querySelector(".cart__buy-btn");
+let body = document.body;
 
 let noProductText = "<p>There aren't any products in your cart!!</p>";
 
@@ -136,7 +137,7 @@ shoppingCart.addEventListener("click", function() {
     shoppingCartBlock.classList.add("cart-display");
     shoppingCartBlock.addEventListener("mouseover", function() {
         shoppingCartBlock.classList.add("cart-display");
-        shoppingCartBlock.addEventListener("mouseout", function() {
+        body.addEventListener("click", function() {
             shoppingCartBlock.classList.remove("cart-display");
         });
     });

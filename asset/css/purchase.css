@@ -11,7 +11,7 @@
     display: block;
 }
 
-.purchase-notification {
+.notification {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     display: none;
 }
 
-.purchase-notification>button {
+.notification>button {
     background-color: orangered;
     padding: 10px 15px;
     color: #fff;
@@ -33,7 +33,7 @@
     border: none;
 }
 
-.purchase-notification>h2 {
+.notification>h2 {
     color: red;
     font-size: 30px;
 }
@@ -42,6 +42,6 @@
     opacity: .8;
 }
 
-.purchase-notification-display {
+.notification-display {
     display: flex;
 }
