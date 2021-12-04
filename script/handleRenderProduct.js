@@ -36,6 +36,7 @@ let msiGalleryProducts = [];
 let hpGalleryProducts = [];
 let dellGalleryProducts = [];
 
+let scrollToTop = document.getElementById("scroll-to-top");
 
 for (let i = 0; i < 3; i++) {
     macbookGalleryProducts.push(mac[i]);
@@ -46,7 +47,6 @@ for (let i = 0; i < 3; i++) {
     msiGalleryProducts.push(msi[i]);
     hpGalleryProducts.push(hp[i]);
     dellGalleryProducts.push(dell[i]);
-
 }
 renderProducts(macbookGalleryProducts, macbookGallery);
 renderProducts(surfaceGalleryProducts, surfaceGallery);
@@ -77,7 +77,7 @@ renderProducts(PRODUCT, allProductsPageBlock);
 
 //BONUS SCROLL TO TOP
 
-let scrollToTop = document.getElementById("scroll-to-top");
+
 
 scrollToTop.addEventListener("click", function() {
     window.scrollTo(0, 0);
