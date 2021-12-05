@@ -4,15 +4,14 @@ let cartBlock = document.querySelector(".cart__products");
 let allPrice = 0;
 let allPriceBlock = document.querySelector(".cart__buy>h6>span");
 let shoppingCartBlock = document.querySelector(".cart");
-let shoppingCart = document.getElementById("shopping-cart");
+let shoppingCart = document.querySelector("#shopping-cart>i");
 let notification = document.querySelector(".notification");
 let notificationClose = document.querySelector(".notification>button");
 let clearAllInCartBtn = document.querySelector(".cart__clear");
 let cartBuyBtn = document.querySelector(".cart__buy-btn");
-let body = document.body;
 
 let noProductText = "<p>There aren't any products in your cart!!</p>";
-
+console.log(shoppingCart)
 cartBlock.innerHTML = noProductText;
 
 let cartProductList = product.forEach(function(item) {
@@ -130,16 +129,19 @@ notificationClose.addEventListener("click", function() {
     overlay.classList.remove("overlay-display");
 });
 
-shoppingCart.addEventListener("click", function() {
+shoppingCart.addEventListener("click", function(e) {
+    shoppingCartBlock.classList.add("cart-display");
     handleSHoppingCartwhenClick();
     deleteProductInCart();
     updateAllPrice();
-    shoppingCartBlock.classList.add("cart-display");
-    shoppingCartBlock.addEventListener("mouseover", function() {
-        shoppingCartBlock.classList.add("cart-display");
-        body.addEventListener("click", function() {
+    console.log(shoppingCartBlock.parentElement);
+    let container = shoppingCartBlock.parentElement;
+    console.log(shoppingCart)
+    container.addEventListener("click", function(e) {
+        console.log(e.target)
+        if (e.target != shoppingCart && e.target != shoppingCart.childNodes) {
             shoppingCartBlock.classList.remove("cart-display");
-        });
-    });
+        }
+    })
 });
 allPriceBlock.innerHTML = allPrice;

@@ -14,6 +14,6 @@
 -Build Register page                V
 -Handle data between pages   
 -Build Shopping Cart                V
--Build About us Part
+-Build About us Part                V
 -Build Preview Products
--Build Footer
+-Build Footer                       V

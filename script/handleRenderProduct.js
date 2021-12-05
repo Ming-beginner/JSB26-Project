@@ -36,7 +36,7 @@ let msiGalleryProducts = [];
 let hpGalleryProducts = [];
 let dellGalleryProducts = [];
 
-let scrollToTop = document.getElementById("scroll-to-top");
+
 
 for (let i = 0; i < 3; i++) {
     macbookGalleryProducts.push(mac[i]);
@@ -76,7 +76,7 @@ renderProducts(PRODUCT, allProductsPageBlock);
 
 
 //BONUS SCROLL TO TOP
-
+let scrollToTop = document.getElementById("scroll-to-top");
 
 
 scrollToTop.addEventListener("click", function() {

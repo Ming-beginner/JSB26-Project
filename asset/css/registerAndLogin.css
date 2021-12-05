@@ -43,6 +43,7 @@ form>div>input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ced4da;
+    margin-bottom: 10px;
 }
 
 .input-error {
