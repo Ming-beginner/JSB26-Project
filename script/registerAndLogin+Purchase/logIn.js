@@ -8,10 +8,10 @@ let logInPassword = document.getElementById("log-in__user-pass"),
 logInAppendPassword.addEventListener("click", appendPassword);
 logInSubmitBtn.addEventListener("click", appendNotification);
 
-logInUsername.addEventListener("focusout", function() {
+logInUsername.addEventListener("keyup", function() {
     handleInput(logInUsername);
 })
-logInPassword.addEventListener("focusout", function() {
+logInPassword.addEventListener("keyup", function() {
     handlePasswordInput(logInPassword);
 })
 

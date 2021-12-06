@@ -11,7 +11,6 @@ let clearAllInCartBtn = document.querySelector(".cart__clear");
 let cartBuyBtn = document.querySelector(".cart__buy-btn");
 
 let noProductText = "<p>There aren't any products in your cart!!</p>";
-console.log(shoppingCart)
 cartBlock.innerHTML = noProductText;
 
 let cartProductList = product.forEach(function(item) {
@@ -134,12 +133,18 @@ shoppingCart.addEventListener("click", function(e) {
     handleSHoppingCartwhenClick();
     deleteProductInCart();
     updateAllPrice();
-    console.log(shoppingCartBlock.parentElement);
-    let container = shoppingCartBlock.parentElement;
-    console.log(shoppingCart)
+    let container = document.querySelector("main");
     container.addEventListener("click", function(e) {
-        console.log(e.target)
-        if (e.target != shoppingCart && e.target != shoppingCart.childNodes) {
+        if (e.target == container ||
+            e.target.parentElement == container ||
+            e.target.parentElement.parentElement == container ||
+            e.target.parentElement.parentElement.parentElement == container ||
+            e.target.parentElement.parentElement.parentElement.parentElement == container ||
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement == container ||
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement == container ||
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement == container ||
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement == container
+        ) {
             shoppingCartBlock.classList.remove("cart-display");
         }
     })
