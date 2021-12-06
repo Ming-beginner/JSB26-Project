@@ -44,7 +44,7 @@ main section {
     align-items: center;
     height: max-content;
     display: none;
-    background-image: url("/asset/img/background.gif");
+    background-image: url(/asset/img/background.gif);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
