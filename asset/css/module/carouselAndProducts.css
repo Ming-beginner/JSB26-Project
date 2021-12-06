@@ -140,6 +140,11 @@
     background: #fff;
     display: flex;
     flex-direction: column;
+    background-image: url("https://ming-beginner.github.io/JSB26-Project/asset/img/background.gif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     display: none;
 }
 

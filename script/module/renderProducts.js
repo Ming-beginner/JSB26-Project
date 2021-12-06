@@ -1,6 +1,6 @@
 export default function renderProducts(productList, placeToRender) {
     let htmls = productList.map(function(item) {
-        return `<div class="product__item laptop-${item.id} wow animate__animated animate__fadeInUp animate__slow">
+        return `<div class="product__item laptop-${item.id} wow animate__animated animate__fadeInUp animate__fast">
                     <img class="product__item--img" src="${item.imageLink}" alt="">
                     <div class="product__item--content">
                         <h3>${item.name}</h3>
