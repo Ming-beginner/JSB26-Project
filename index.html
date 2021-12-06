@@ -27,6 +27,7 @@
 
 <body>
     <div class="overlay"></div>
+    <div class="overlay2"></div>
     <div class="causion">*Use Menu Bar to move between tabs</div>
     <div class="cart">
         <h6>Your Cart:</h3>
@@ -179,99 +180,115 @@
             <!--END PRODUCT PORTFLIO-->
             <br>
             <!--MACBOOKS-->
-            <h1>Macbook</h1>
-            <div class="product-block macbook-block">
+            <div class="product__container">
+                <h1>Macbook</h1>
+                <div class="product-block macbook-block">
 
+                </div>
+                <button onclick="changingTabs(macbookPage)" class="wow
+                        msi-page animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-macbook-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(macbookPage)" class="product-page
-                    msi-page animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-macbook-page">See
-                    More</button>
             <!--END MACBOOKS-->
             <br><br>
             <!--SURFACE-->
-            <h1>Laptop Surface</h1>
-            <div class="product-block surface-block">
+            <div class="product__container">
+                <h1>Laptop Surface</h1>
+                <div class="product-block surface-block">
 
+                </div>
+                <button onclick="changingTabs(surfacePage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-surface-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(surfacePage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-surface-page">See
-                    More</button>
             <!--END SURFACE-->
             <br><br>
             <!--ACER LAPTOPS-->
-            <h1>Laptop Acer</h1>
-            <div class="product-block acer-block">
+            <div class="product__container">
+                <h1>Laptop Acer</h1>
+                <div class="product-block acer-block">
 
+                </div>
+                <button onclick="changingTabs(acerPage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-acer-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(acerPage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-acer-page">See
-                    More</button>
             <!--END ACER-->
             <br><br>
             <!--ASUS-->
-            <h1>Laptop asus</h1>
-            <div class="product-block asus-block">
+            <div class="product__container">
+                <h1>Laptop asus</h1>
+                <div class="product-block asus-block">
 
+                </div>
+                <button onclick="changingTabs(asusPage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-asus-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(asusPage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-asus-page">See
-                    More</button>
             <!--END ASUS-->
             <br><br>
             <!--LENOVO-->
-            <h1>Laptop Lenovo</h1>
-            <div class="product-block lenovo-block">
+            <div class="product__container">
+                <h1>Laptop Lenovo</h1>
+                <div class="product-block lenovo-block">
 
+                </div>
+                <button onclick="changingTabs(lenovoPage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-lenovo-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(lenovoPage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-lenovo-page">See
-                    More</button>
             <!--END LENOVO-->
             <br><br>
             <!--MSI-->
-            <h1>Laptop MSI</h1>
-            <div class="product-block msi-block">
+            <div class="product__container">
+                <h1>Laptop MSI</h1>
+                <div class="product-block msi-block">
 
+                </div>
+                <button onclick="changingTabs(msiPage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-msi-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(msiPage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-msi-page">See
-                    More</button>
             <!--END MSI-->
             <br><br>
             <!--HP-->
-            <h1>Laptop HP</h1>
-            <div class="product-block hp-block">
+            <div class="product__container">
+                <h1>Laptop HP</h1>
+                <div class="product-block hp-block">
 
+                </div>
+                <button onclick="changingTabs(hpPage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-hp-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(hpPage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-hp-page">See
-                    More</button>
             <!--END HP-->
             <br><br>
             <!--DELL-->
-            <h1>Laptop Dell</h1>
-            <div class="product-block dell-block">
+            <div class="product__container">
+                <h1>Laptop Dell</h1>
+                <div class="product-block dell-block">
 
+                </div>
+                <button onclick="changingTabs(dellPage)" class="wow
+                        animate__animated animate__fadeInUp animate__fast
+                        product__see-more goto-dell-page">See
+                        More</button>
             </div>
             <br><br>
-            <button onclick="changingTabs(dellPage)" class="wow
-                    animate__animated animate__fadeInUp animate__fast
-                    product__see-more goto-dell-page">See
-                    More</button>
             <!--END DELL-->
         </section>
         <!--LAPTOP PAGES-->
@@ -283,7 +300,7 @@
 
             </div>
             <div class="product-portfolio wow animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -309,7 +326,7 @@
         <div class="product-page all-products-page">
             <h1>ALL LAPTOP</h1>
             <div class="product-portfolio wow animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -342,7 +359,7 @@
             </div>
             <h1>OTHER LAPTOPS</h1>
             <div class="product-portfolio animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -372,7 +389,7 @@
             </div>
             <h1>OTHER LAPTOPS</h1>
             <div class="product-portfolio wow animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -402,7 +419,7 @@
             </div>
             <h1>OTHER LAPTOPS</h1>
             <div class="product-portfolio wow animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -432,7 +449,7 @@
             </div>
             <h1>OTHER LAPTOPS</h1>
             <div class="product-portfolio wow animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -462,7 +479,7 @@
             </div>
             <h1>OTHER LAPTOPS</h1>
             <div class="product-portfolio wow animate__animated
-                    animate__slideInLeft animate__slow">
+                    animate__slideInLeft animate__fast">
                 <div onclick="changingTabs(macbookPage)" class="product-portfolio__item
                         goto-macbook-page">Macbook
                 </div>
@@ -544,8 +561,10 @@
             </div>
         </div>
         <!--END DELL PAGE-->
+
     </main>
     <button id="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+    <div class="preview__block"></div>
     <!-- Footer -->
     <footer id="footer" class="page-footer font-small unique-color-dark">
         <img width="70px" src="./asset/img/logo.png" alt="">

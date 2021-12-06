@@ -3,7 +3,6 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 1.7;
     perspective-origin: 0% 50%;
-    perspective: 800px;
     background-color: var(--primary-color) !important;
 }
 
@@ -12,21 +11,29 @@ main {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    transform-origin: 0% 50%;
-    background-size: cover;
     height: max-content;
-    transition: transform 150ms ease-out;
 }
 
 .overlay {
     width: 100%;
-    height: 800%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     left: 0;
     display: none;
     z-index: 90;
+}
+
+.overlay2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
 }
 
 .overlay-display {
@@ -41,14 +48,13 @@ main section {
     background: #fff;
     display: flex;
     flex-direction: column;
+    background-image: url("https://ming-beginner.github.io/JSB26-Project/asset/img/background.gif"), linear-gradient(#6190E8, #A7BFE8);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
     align-items: center;
     height: max-content;
     display: none;
-    background-image: url("https://ming-beginner.github.io/JSB26-Project/asset/img/background.gif");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 section h1 {
@@ -57,6 +63,7 @@ section h1 {
     align-self: flex-start;
     margin-left: 10px;
     font-size: 2em;
+    color: var(--feature-color);
 }
 
 section p {
@@ -65,7 +72,8 @@ section p {
 }
 
 .button-block {
-    position: fixed;
+    position: absolute;
+    z-index: 20;
     top: 10px;
     right: 10px;
 }

@@ -15,7 +15,7 @@
 }
 
 .notification {
-    position: sticky;
+    position: fixed;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -23,6 +23,7 @@
     left: 42%;
     width: max-content;
     display: none;
+    z-index: 101;
 }
 
 .cart-display {

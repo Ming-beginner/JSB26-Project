@@ -90,3 +90,53 @@ window.onscroll = function() {
         scrollToTop.style.display = "none";
     }
 };
+
+//BONUS RENDER PREVIEW
+let overlay = document.querySelector(".overlay");
+
+PRODUCT.forEach(function(item) {
+    let htmls =
+        `
+    <div class="preview preview-id-${item.id} wow animate__animated animate__fadeInUp">
+        <button class="preview__close preview__close-${item.id}"><i id="preview__close-icon" class="fas fa-times"></i></button>
+        <img src="${item.imageLink}" alt="">
+        <div class="preview__content">
+            <div class="preview__text">
+                <h2>${item.name}</h2>
+                <p>${item.feature}</p>
+                <div class="preview__price">
+                    <h3>${item.price}</h3>
+                    <p>${item.oldPrice}</p>
+                </div>
+            </div>
+            <div class="preview__button-block">
+                <button onclick="window.location.href='./purchaseSite.html'" class="preview__buy-now">Buy Now</button>
+                <button class="preview__add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    `
+    document.querySelector(".preview__block").innerHTML += htmls;
+})
+
+for (let i = 1; i <= PRODUCT.length; i++) {
+    let laptops = document.querySelectorAll(`.laptop-${i}`);
+    for (let j of laptops) {
+        j.addEventListener('click', function(e) {
+            if (e.target.nodeName != "BUTTON") {
+                document.querySelector(`.preview-id-${i}`).classList.add("preview-display");
+                document.querySelector(".preview__block").classList.add("preview__block-display");
+                overlay.classList.add("overlay-display");
+            }
+            document.querySelector(`.preview__close-${i}`).addEventListener("click", function(e) {
+                document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
+                document.querySelector(".preview__block").classList.remove("preview__block-display");
+                overlay.classList.remove("overlay-display");
+            })
+            document.querySelector(".overlay").addEventListener("click", function() {
+                document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
+                document.querySelector(".preview__block").classList.remove("preview__block-display");
+            })
+        })
+    }
+}

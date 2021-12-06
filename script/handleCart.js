@@ -9,30 +9,34 @@ let notification = document.querySelector(".notification");
 let notificationClose = document.querySelector(".notification>button");
 let clearAllInCartBtn = document.querySelector(".cart__clear");
 let cartBuyBtn = document.querySelector(".cart__buy-btn");
+let overlay = document.querySelector(".overlay2")
 
 let noProductText = "<p>There aren't any products in your cart!!</p>";
 cartBlock.innerHTML = noProductText;
 
 let cartProductList = product.forEach(function(item) {
-    document.querySelector(`.laptop-${item.id}>.product__item--buy-block>.buy-block__add`).addEventListener("click", function() {
-        appendNotification();
-        let htmls = `
-        <div class="cart__product cart__product-${item.id}">
-            <img src="${item.imageLink}" alt="">
-            <div class="cart__product--content">
-                <h6>${item.name}</h6>
-                <p>${item.price}</p>
-            </div>
-            <div class="cart__check-block">
-                <button class="cart__clear-item cart__clear-item-${item.id}"><i class="fas fa-times"></i></button>
-                <input class="cart__checkbox laptop-${item.id}-checkbox" type="checkbox" name="" id="">
-            </div>
-        </div>`
-        if (cartBlock.contains(document.querySelector('.cart__products>p'))) {
-            cartBlock.removeChild(document.querySelector('.cart__products>p'));
-        }
-        cartBlock.innerHTML += htmls;
-    })
+    let nodes = [document.querySelector(`.laptop-${item.id}>.product__item--buy-block>.buy-block__add`), document.querySelector(`.preview-id-${item.id}>.preview__content>.preview__button-block>.preview__add-to-cart`)];
+    for (i of nodes) {
+        i.addEventListener("click", function() {
+            appendNotification();
+            let htmls = `
+            <div class="cart__product cart__product-${item.id}">
+                <img src="${item.imageLink}" alt="">
+                <div class="cart__product--content">
+                    <h6>${item.name}</h6>
+                    <p>${item.price}</p>
+                </div>
+                <div class="cart__check-block">
+                    <button class="cart__clear-item cart__clear-item-${item.id}"><i class="fas fa-times"></i></button>
+                    <input class="cart__checkbox laptop-${item.id}-checkbox" type="checkbox" name="" id="">
+                </div>
+            </div>`
+            if (cartBlock.contains(document.querySelector('.cart__products>p'))) {
+                cartBlock.removeChild(document.querySelector('.cart__products>p'));
+            }
+            cartBlock.innerHTML += htmls;
+        });
+    }
 })
 
 
@@ -111,7 +115,6 @@ function handleSHoppingCartwhenClick() {
 function appendNotification() {
     notification.classList.add("cart-display");
     overlay.classList.add("overlay-display");
-    scrollTo(0, 0);
 }
 
 
