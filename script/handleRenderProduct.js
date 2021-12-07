@@ -35,7 +35,18 @@ let lenovoGalleryProducts = [];
 let msiGalleryProducts = [];
 let hpGalleryProducts = [];
 let dellGalleryProducts = [];
+let list = [];
+export const PRODUCT = list.concat(mac, surface, acer, lenovo, asus, dell, hp, msi);
 
+renderProducts(acer, acerPageBlock);
+renderProducts(mac, macbookPageBlock);
+renderProducts(surface, surfacePageBlock);
+renderProducts(asus, asusPageBlock);
+renderProducts(hp, hpPageBlock);
+renderProducts(msi, msiPageBlock);
+renderProducts(dell, dellPageBlock);
+renderProducts(lenovo, lenovoPageBlock);
+renderProducts(PRODUCT, allProductsPageBlock);
 
 
 for (let i = 0; i < 3; i++) {
@@ -58,20 +69,9 @@ renderProducts(hpGalleryProducts, hpGallery);
 renderProducts(dellGalleryProducts, dellGallery);
 
 
-let list = [];
-export const PRODUCT = list.concat(mac, surface, acer, lenovo, asus, dell, hp, msi);
 
 
 
-renderProducts(acer, acerPageBlock);
-renderProducts(mac, macbookPageBlock);
-renderProducts(surface, surfacePageBlock);
-renderProducts(asus, asusPageBlock);
-renderProducts(hp, hpPageBlock);
-renderProducts(msi, msiPageBlock);
-renderProducts(dell, dellPageBlock);
-renderProducts(lenovo, lenovoPageBlock);
-renderProducts(PRODUCT, allProductsPageBlock);
 
 
 

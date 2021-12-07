@@ -15,11 +15,9 @@ let noProductText = "<p>There aren't any products in your cart!!</p>";
 cartBlock.innerHTML = noProductText;
 
 let cartProductList = product.forEach(function(item) {
-    let nodes = [document.querySelector(`.laptop-${item.id}>.product__item--buy-block>.buy-block__add`), document.querySelector(`.preview-id-${item.id}>.preview__content>.preview__button-block>.preview__add-to-cart`)];
-    for (i of nodes) {
-        i.addEventListener("click", function() {
-            appendNotification();
-            let htmls = `
+    function handleAddTocart() {
+        appendNotification();
+        let htmls = `
             <div class="cart__product cart__product-${item.id}">
                 <img src="${item.imageLink}" alt="">
                 <div class="cart__product--content">
@@ -31,18 +29,26 @@ let cartProductList = product.forEach(function(item) {
                     <input class="cart__checkbox laptop-${item.id}-checkbox" type="checkbox" name="" id="">
                 </div>
             </div>`
-            if (cartBlock.contains(document.querySelector('.cart__products>p'))) {
-                cartBlock.removeChild(document.querySelector('.cart__products>p'));
-            }
-            cartBlock.innerHTML += htmls;
+        if (cartBlock.contains(document.querySelector('.cart__products>p'))) {
+            cartBlock.removeChild(document.querySelector('.cart__products>p'));
+        }
+        cartBlock.innerHTML += htmls;
+    }
+    let productToAdd = document.querySelectorAll(`.laptop-${item.id}>.product__item--buy-block>.buy-block__add`);
+    for (let i of productToAdd) {
+        i.addEventListener("click", function() {
+            handleAddTocart();
         });
     }
+    document.querySelector(`.preview-id-${item.id}>.preview__content>.preview__button-block>.preview__add-to-cart`).addEventListener("click", function() {
+        handleAddTocart();
+    });
 })
 
 
 function deleteProductInCart() {
     let productDelBtn = document.querySelectorAll(".cart__clear-item");
-    for (i of productDelBtn) {
+    for (let i of productDelBtn) {
         i.addEventListener("click", function(e) {
             if (e.target.parentElement.parentElement.parentElement.querySelector(".cart__checkbox").checked) {
                 allPrice -= Number(e.target.parentElement.parentElement.parentElement.querySelector(".cart__product--content>p").textContent);
@@ -69,7 +75,7 @@ function deleteProductInCart() {
 
 function updateAllPrice() {
     let buyCheckbox = document.querySelectorAll(".cart__checkbox");
-    for (i of buyCheckbox) {
+    for (let i of buyCheckbox) {
         i.addEventListener("click", function(e) {
             if (e.target.checked) {
                 allPrice += Number(e.target.parentElement.parentElement.querySelector(".cart__product--content>p").textContent);

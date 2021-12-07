@@ -17,7 +17,7 @@ product.addEventListener("mouseover", appendProductList);
 product.addEventListener("mouseout", hideProductList);
 product.addEventListener("click", closeNavByClickMain);
 productList.addEventListener("click", closeNavByClickMain);
-for (i of products) {
+for (let i of products) {
     i.addEventListener("click", function() {
         main.classList.remove("menu-active");
         nav.classList.remove("menu-active");
