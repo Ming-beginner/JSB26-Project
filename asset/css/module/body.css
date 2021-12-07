@@ -48,7 +48,7 @@ main section {
     background: #fff;
     display: flex;
     flex-direction: column;
-    background-image: url("https://ming-beginner.github.io/JSB26-Project/asset/img/background.gif"), linear-gradient(#6190E8, #A7BFE8);
+    background-image: url("../../img/background.gif"), linear-gradient(#6190E8, #A7BFE8);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
