@@ -6,9 +6,3 @@
 @import url("./module/body.css");
 @import url("./module/cart.css");
 @import url("./module/preview.css");
-@media (max-width: 723px) {
-    .causion {
-        font-size: 11px;
-        width: 80px;
-    }
-}
