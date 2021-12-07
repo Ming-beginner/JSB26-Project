@@ -157,11 +157,12 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    background-image: url("https://ming-beginner.github.io/JSB26-Project/asset/img/background.gif");
+    background-image: url("../../img/background.gif");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    box-shadow: inset 0 0 0 2000px rgba(150, 150, 150, 0.55);
     display: none;
 }
 

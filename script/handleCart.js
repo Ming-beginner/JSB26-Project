@@ -14,6 +14,7 @@ let overlay = document.querySelector(".overlay")
 let noProductText = "<p>There aren't any products in your cart!!</p>";
 cartBlock.innerHTML = noProductText;
 
+
 let cartProductList = product.forEach(function(item) {
     function handleAddTocart() {
         appendNotification();
@@ -25,7 +26,7 @@ let cartProductList = product.forEach(function(item) {
                     <p>${item.price}</p>
                 </div>
                 <div class="cart__check-block">
-                    <button class="cart__clear-item cart__clear-item-${item.id}"><i class="fas fa-times"></i></button>
+                    <div class="cart__clear-item cart__clear-item-${item.id}"><i class="fas fa-times"></i></div>
                     <input class="cart__checkbox laptop-${item.id}-checkbox" type="checkbox" name="" id="">
                 </div>
             </div>`
@@ -47,7 +48,7 @@ let cartProductList = product.forEach(function(item) {
 
 
 function deleteProductInCart() {
-    let productDelBtn = document.querySelectorAll(".cart__clear-item");
+    let productDelBtn = document.querySelectorAll(".cart__clear-item>i");
     for (let i of productDelBtn) {
         i.addEventListener("click", function(e) {
             if (e.target.parentElement.parentElement.parentElement.querySelector(".cart__checkbox").checked) {
@@ -58,7 +59,6 @@ function deleteProductInCart() {
             if (cartBlock.innerHTML == 0) {
                 cartBlock.innerHTML = noProductText;
             }
-            console.log(allPrice);
             if (allPrice === 0) {
                 cartBuyBtn.onclick = "";
                 cartBuyBtn.style.cursor = "not-allowed";
@@ -144,7 +144,8 @@ shoppingCart.addEventListener("click", function(e) {
     updateAllPrice();
     let container = document.querySelector("main");
     container.addEventListener("click", function(e) {
-        if (e.target == container ||
+        if (e.target != shoppingCartBlock ||
+            e.target == container ||
             e.target.parentElement == container ||
             e.target.parentElement.parentElement == container ||
             e.target.parentElement.parentElement.parentElement == container ||

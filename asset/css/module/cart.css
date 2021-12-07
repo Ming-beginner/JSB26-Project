@@ -9,6 +9,9 @@
     border: 1px solid var(--feature-color);
     padding: 10px 15px;
     width: 500px;
+    min-height: 20vh;
+    max-height: 40vh;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     display: none;
@@ -16,14 +19,20 @@
 
 .notification {
     position: fixed;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     top: 50%;
-    left: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: max-content;
+    height: max-content;
     display: none;
     z-index: 101;
+    background-color: var(--white-text);
+    border: 1px solid var(--feature-color);
+    padding: 10px 15px;
 }
 
 .cart-display {
@@ -37,6 +46,10 @@
 
 .notification>button:hover {
     opacity: .8;
+}
+
+.cart__products {
+    overflow: auto;
 }
 
 .cart__product {
@@ -64,6 +77,7 @@
 }
 
 .cart__buy {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -84,15 +98,21 @@
 .cart__check-block {
     display: flex;
     justify-content: center;
-    height: fit-content;
+    height: max-content;
     width: fit-content;
     flex-direction: column;
 }
 
 .cart__check-block>button {
+    margin-top: 20px;
     width: fit-content;
     height: fit-content;
     background-color: transparent;
+}
+
+.cart__clear-item>i:hover {
+    cursor: pointer;
+    opacity: .8;
 }
 
 .cart__clear {
@@ -108,10 +128,35 @@
     transition: ease .3s;
 }
 
+@media (min-width: 723px) and (max-width: 1025px) {
+    .cart__checkbox {
+        width: 30px;
+        height: 30px;
+    }
+    .cart__clear-item {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .cart__clear-item>i {
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 723px) {
+    .cart__checkbox {
+        width: 20px;
+        height: 20px;
+    }
     .cart {
         right: 0;
         top: 70px;
         width: 100%;
+    }
+    .cart__clear-item {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .cart__clear-item>i {
+        font-size: 20px;
     }
 }

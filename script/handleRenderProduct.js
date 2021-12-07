@@ -93,7 +93,6 @@ window.onscroll = function() {
 
 //BONUS RENDER PREVIEW
 let overlay = document.querySelector(".preview__block");
-console.log(overlay);
 PRODUCT.forEach(function(item) {
     let htmls =
         `
