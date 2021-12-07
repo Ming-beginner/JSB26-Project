@@ -6,15 +6,6 @@
 @import url("./module/body.css");
 @import url("./module/cart.css");
 @import url("./module/preview.css");
-.causion {
-    width: fit-content;
-    height: fit-content;
-    position: fixed;
-    color: orangered;
-    left: 30%;
-    top: 10px;
-}
-
 @media (max-width: 723px) {
     .causion {
         font-size: 11px;
