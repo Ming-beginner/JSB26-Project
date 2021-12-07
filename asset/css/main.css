@@ -10,6 +10,7 @@
     width: fit-content;
     height: fit-content;
     position: fixed;
+    color: var(--feature-color);
     left: 30%;
     top: 10px;
 }
