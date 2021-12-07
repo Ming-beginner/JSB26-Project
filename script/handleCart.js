@@ -9,7 +9,7 @@ let notification = document.querySelector(".notification");
 let notificationClose = document.querySelector(".notification>button");
 let clearAllInCartBtn = document.querySelector(".cart__clear");
 let cartBuyBtn = document.querySelector(".cart__buy-btn");
-let overlay = document.querySelector(".overlay2")
+let overlay = document.querySelector(".overlay")
 
 let noProductText = "<p>There aren't any products in your cart!!</p>";
 cartBlock.innerHTML = noProductText;

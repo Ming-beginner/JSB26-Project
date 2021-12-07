@@ -92,12 +92,12 @@ window.onscroll = function() {
 };
 
 //BONUS RENDER PREVIEW
-let overlay = document.querySelector(".overlay");
-
+let overlay = document.querySelector(".preview__block");
+console.log(overlay);
 PRODUCT.forEach(function(item) {
     let htmls =
         `
-    <div class="preview preview-id-${item.id} wow animate__animated animate__fadeInUp">
+    <div class="preview preview-id-${item.id} animate__animated animate__fadeInUp">
         <button class="preview__close preview__close-${item.id}"><i id="preview__close-icon" class="fas fa-times"></i></button>
         <img src="${item.imageLink}" alt="">
         <div class="preview__content">
@@ -125,17 +125,15 @@ for (let i = 1; i <= PRODUCT.length; i++) {
         j.addEventListener('click', function(e) {
             if (e.target.nodeName != "BUTTON") {
                 document.querySelector(`.preview-id-${i}`).classList.add("preview-display");
-                document.querySelector(".preview__block").classList.add("preview__block-display");
-                overlay.classList.add("overlay-display");
+                overlay.classList.add("preview__block-display");
             }
-            document.querySelector(`.preview__close-${i}`).addEventListener("click", function(e) {
+            document.querySelector(`.preview__close-${i}`).addEventListener("click", function() {
                 document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
-                document.querySelector(".preview__block").classList.remove("preview__block-display");
-                overlay.classList.remove("overlay-display");
+                overlay.classList.remove("preview__block-display");
             })
-            document.querySelector(".overlay").addEventListener("click", function() {
+            overlay.addEventListener("click", function() {
                 document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
-                document.querySelector(".preview__block").classList.remove("preview__block-display");
+                overlay.classList.remove("preview__block-display");
             })
         })
     }

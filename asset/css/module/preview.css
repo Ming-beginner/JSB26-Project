@@ -1,23 +1,26 @@
 @import url("./vars.css");
 .preview__block {
-    width: 70%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     position: fixed;
     z-index: 99;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
 }
 
 .preview__block-display {
-    display: block;
+    display: flex;
 }
 
 .preview {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 80%;
     background-color: var(--white-text);
     display: flex;
     z-index: 999;
