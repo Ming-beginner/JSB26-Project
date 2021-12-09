@@ -3,7 +3,7 @@ let addressInput = document.querySelector(".address-input");
 let phoneInput = document.querySelector(".phone-input");
 let purchaseBtn = document.querySelector(".purchase-btn");
 let overlay = document.querySelector(".overlay");
-let notification = document.querySelector(".purchase-notification");
+let notification = document.querySelector(".notification");
 nameInput.addEventListener("focusout", function() {
     handleInput(nameInput);
 })
@@ -15,7 +15,7 @@ phoneInput.addEventListener("focusout", function() {
 })
 purchaseBtn.addEventListener("click", function() {
     overlay.classList.add("overlay-display");
-    notification.classList.add("purchase-notification-display");
+    notification.classList.add("notification-display");
 })
 
 
