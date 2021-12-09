@@ -26,8 +26,8 @@
  }
  
  #scroll-to-top {
-     position: sticky;
-     left: 100%;
+     position: fixed;
+     right: 0;
      bottom: 0;
      width: 30px;
      height: 30px;
