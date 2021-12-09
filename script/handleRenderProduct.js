@@ -119,20 +119,29 @@ PRODUCT.forEach(function(item) {
 })
 
 for (let i = 1; i <= PRODUCT.length; i++) {
+    function addAndRemoverPreview(method) {
+        if (method === "remove") {
+            document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
+            overlay.classList.remove("preview__block-display");
+        } else if (method === "add") {
+            document.querySelector(`.preview-id-${i}`).classList.add("preview-display");
+            overlay.classList.add("preview__block-display");
+        }
+    }
     let laptops = document.querySelectorAll(`.laptop-${i}`);
     for (let j of laptops) {
         j.addEventListener('click', function(e) {
             if (e.target.nodeName != "BUTTON") {
-                document.querySelector(`.preview-id-${i}`).classList.add("preview-display");
-                overlay.classList.add("preview__block-display");
+                addAndRemoverPreview("add");
             }
             document.querySelector(`.preview__close-${i}`).addEventListener("click", function() {
-                document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
-                overlay.classList.remove("preview__block-display");
+                addAndRemoverPreview("remove");
             })
-            overlay.addEventListener("click", function() {
-                document.querySelector(`.preview-id-${i}`).classList.remove("preview-display");
-                overlay.classList.remove("preview__block-display");
+            overlay.addEventListener("click", function(e) {
+                console.log(e.target);
+                if (e.target.isEqualNode(overlay)) {
+                    addAndRemoverPreview("remove");
+                }
             })
         })
     }

@@ -74,7 +74,7 @@ export const MSI = [{
         name: "MSI Summit E16 Flip",
         imageLink: "./asset/img/msi/laptop-msi-summit-e16-flip.jpg",
         feature: "16 inches/16GB/1TB/Intel Core i7",
-        price: "No Stock Yet",
+        price: "39000000",
         oldPrice: "40000000",
         id: 45
     },

@@ -40,6 +40,10 @@
     width: auto;
 }
 
+.preview__text>h2 {
+    font-size: 20px;
+}
+
 .preview__close {
     position: absolute;
     top: 0;
@@ -78,6 +82,9 @@
 }
 
 .preview__button-block>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 47%;
     height: 100%;
 }

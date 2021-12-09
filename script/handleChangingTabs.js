@@ -10,16 +10,16 @@ let lenovoPage = document.querySelector(".lenovo-page");
 let allLaptopPage = document.querySelector(".all-products-page");
 
 let pageList = [
-  mainPage,
-  macbookPage,
-  surfacePage,
-  acerPage,
-  asusPage,
-  dellPage,
-  hpPage,
-  msiPage,
-  lenovoPage,
-  allLaptopPage
+    mainPage,
+    macbookPage,
+    surfacePage,
+    acerPage,
+    asusPage,
+    dellPage,
+    hpPage,
+    msiPage,
+    lenovoPage,
+    allLaptopPage
 ];
 
 let macbookBtn = document.querySelectorAll(".goto-macbook-page");
@@ -34,10 +34,10 @@ let allProductBtn = document.querySelectorAll(".goto-all-product-page");
 
 
 function changingTabs(activePage) {
-  for (i of pageList) {
-    i.classList.remove("page-active");
-  }
-  activePage.classList.add("page-active");
-  window.scrollTo(0,0);
-  document.body.style.scrollBehavior = "smooth";
+    for (i of pageList) {
+        i.classList.remove("page-active");
+    }
+    activePage.classList.add("page-active");
+    window.scrollTo(0, 0);
+    document.body.style.scrollBehavior = "smooth";
 }

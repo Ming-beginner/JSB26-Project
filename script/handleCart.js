@@ -41,7 +41,7 @@ let cartProductList = product.forEach(function(item) {
             handleAddTocart();
         });
     }
-    document.querySelector(`.preview-id-${item.id}>.preview__content>.preview__button-block>.preview__add-to-cart`).addEventListener("click", function() {
+    document.querySelector(`.preview-id-${item.id}>.preview__content>.preview__button-block>.preview__add-to-cart`).addEventListener("click", function(e) {
         handleAddTocart();
     });
 })
