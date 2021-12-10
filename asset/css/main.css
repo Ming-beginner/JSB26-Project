@@ -17,8 +17,36 @@
 html,
 body {
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 button:hover {
     opacity: .8;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--feature-color);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(197, 9, 9);
+    cursor: pointer;
 }

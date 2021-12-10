@@ -10,10 +10,10 @@ logInSubmitBtn.addEventListener("click", appendNotification);
 
 logInUsername.addEventListener("keyup", function() {
     handleInput(logInUsername);
-})
+});
 logInPassword.addEventListener("keyup", function() {
     handlePasswordInput(logInPassword);
-})
+});
 
 function appendNotification() {
     notification.classList.add("notification-display");

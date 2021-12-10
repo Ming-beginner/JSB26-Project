@@ -6,17 +6,17 @@ let overlay = document.querySelector(".overlay");
 let notification = document.querySelector(".notification");
 nameInput.addEventListener("focusout", function() {
     handleInput(nameInput);
-})
+});
 addressInput.addEventListener("focusout", function() {
     handleInput(addressInput);
 });
 phoneInput.addEventListener("focusout", function() {
     handleInput(phoneInput);
-})
+});
 purchaseBtn.addEventListener("click", function() {
     overlay.classList.add("overlay-display");
     notification.classList.add("notification-display");
-})
+});
 
 
 function handleInput(inputNode) {

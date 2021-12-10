@@ -16,5 +16,7 @@
 -Build About us Part                V
 -Build Footer                       V
 
--Build Preview Products-BIG TASK:
+-Build Preview Products-BIG TASK:   var
+
+-Fix bug
 

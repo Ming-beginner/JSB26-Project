@@ -8,14 +8,14 @@ let registerPassWord = document.getElementById("register__user-pass"),
 
 registerUserName.addEventListener("focusout", function() {
     handleInput(registerUserName);
-})
+});
 registerPassWord.addEventListener("focusout", function() {
     handlePasswordInput(registerPassWord);
-})
+});
 
 registerAppendPassword.addEventListener("click", appendPassword);
 registerPassWordConfirm.addEventListener("keyup", validatePassWord);
-registerSubmitBtn.addEventListener("click", appendNotification)
+registerSubmitBtn.addEventListener("click", appendNotification);
 
 function validatePassWord() {
     if (registerPassWord.value != registerPassWordConfirm.value) {
