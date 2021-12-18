@@ -90,6 +90,7 @@
 }
 
 .product__item--img {
+    margin-bottom: 10px;
     width: 100%;
     height: auto;
 }
@@ -236,5 +237,11 @@
     .product__item {
         width: 100%;
         font-size: 8px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .product__item {
+        background-color: var(--white-text)
     }
 }
