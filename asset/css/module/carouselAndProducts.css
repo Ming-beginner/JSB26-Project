@@ -143,7 +143,7 @@
     width: max-content;
     cursor: pointer;
     align-self: center;
-    margin: auto;
+    margin: 30px;
 }
 
 .product__see-more:hover {
@@ -201,7 +201,7 @@
     .product__item {
         margin: 20px 0;
         height: max-content;
-        width: 48%;
+        width: 30%;
     }
 }
 
@@ -215,9 +215,9 @@
         margin-top: 10px;
     }
     .product__item {
-        width: 90%;
+        width: 45%;
         height: max-content;
-        margin: 50px 0;
+        margin: 10px 0;
     }
     .product-block {
         flex-wrap: wrap;
@@ -233,9 +233,9 @@
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 470px) {
     .product__item {
-        width: 100%;
+        width: 70%;
         font-size: 8px;
     }
 }

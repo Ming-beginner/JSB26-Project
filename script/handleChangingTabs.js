@@ -41,3 +41,21 @@ function changingTabs(activePage) {
     window.scrollTo(0, 0);
     document.body.style.scrollBehavior = "smooth";
 }
+
+
+
+
+//BONUS HANDLING AD
+
+let ad = document.querySelector(".img");
+let adClose = document.querySelector(".img>i");
+
+adClose.addEventListener("click", function() {
+    ad.classList.remove("img-active");
+})
+
+setInterval(function() {
+    if (!ad.classList.contains("ad-active")) {
+        ad.classList.add("img-active");
+    }
+}, 60000)
