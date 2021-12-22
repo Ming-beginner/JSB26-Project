@@ -15,7 +15,7 @@ let noProductText = "<p>There aren't any products in your cart!!</p>";
 cartBlock.innerHTML = noProductText;
 
 
-let cartProductList = product.forEach(function(item) {
+product.forEach(function(item) {
     function handleAddTocart() {
         appendNotification();
         let htmls = `

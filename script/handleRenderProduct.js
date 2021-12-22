@@ -49,7 +49,7 @@ renderProducts(lenovo, lenovoPageBlock);
 renderProducts(PRODUCT, allProductsPageBlock);
 
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 4; i++) {
     macbookGalleryProducts.push(mac[i]);
     surfaceGalleryProducts.push(surface[i]);
     acerGalleryProducts.push(acer[i]);
