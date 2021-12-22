@@ -51,11 +51,11 @@ button:hover {
 }
 
 .img {
-    width: 300px;
+    width: 250px;
     height: max-content;
     background-color: #fff;
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     left: 0;
     z-index: 100;
     transform: translateX(-300px);

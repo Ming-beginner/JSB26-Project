@@ -26,7 +26,7 @@
     z-index: 999;
     justify-content: space-around;
     align-items: center;
-    padding: 0 40px;
+    padding: 10px 40px;
     border-radius: 20px;
     display: none;
 }
