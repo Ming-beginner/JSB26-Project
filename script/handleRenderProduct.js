@@ -6,7 +6,7 @@ import { LENOVO as lenovo } from "./module/lenovo.js";
 import { DELL as dell } from "./module/dell.js";
 import { HP as hp } from "./module/hp.js";
 import { MSI as msi } from "./module/msi.js";
-import renderProducts from "./module/renderProducts.js"
+import renderProducts from "./module/renderProducts.js";
 
 let acerPageBlock = document.querySelector(".acer-page>.page-product-block");
 let macbookPageBlock = document.querySelector(".macbook-page>.page-product-block");
