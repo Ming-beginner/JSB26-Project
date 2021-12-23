@@ -138,7 +138,6 @@ for (let i = 1; i <= PRODUCT.length; i++) {
                 addAndRemoverPreview("remove");
             })
             overlay.addEventListener("click", function(e) {
-                console.log(e.target);
                 if (e.target.isEqualNode(overlay)) {
                     addAndRemoverPreview("remove");
                 }
