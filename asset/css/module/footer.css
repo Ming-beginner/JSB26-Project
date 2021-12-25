@@ -1,6 +1,6 @@
  @import "vars.css";
  footer {
-     background-color: var(--primary-color);
+     background-color: var(--text-color);
      display: flex;
      flex-direction: column;
      justify-content: space-between;
